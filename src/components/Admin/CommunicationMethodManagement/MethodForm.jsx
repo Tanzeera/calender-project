@@ -47,7 +47,7 @@ const MethodForm = ({ onSubmit, selectedMethod, companyId }) => {
       mandatory: false,
       otherName: "",
     });
-  };  
+  };
 
   // Function to swap two items in the sequence array
   const swapItems = (index1, index2) => {
@@ -138,13 +138,14 @@ const MethodForm = ({ onSubmit, selectedMethod, companyId }) => {
           ))}
         </ul>
       </div>
-      <div className="form-group checkbox-group">
-        <label>
+      <div className="form-group checkbox-group" style={styles.checkboxGroup}>
+        <label style={styles.checkboxLabel}>
           <input
             type="checkbox"
             name="mandatory"
             checked={formState.mandatory}
             onChange={handleChange}
+            style={styles.checkbox}
           />
           Mandatory
         </label>
@@ -180,6 +181,18 @@ const styles = {
     border: "1px solid #ccc",
     borderRadius: "4px",
     width: "100%",
+  },
+  checkboxGroup: {
+    display: "flex",
+    alignItems: "center",
+    marginTop: "15px", // Add some space above the checkbox
+  },
+  checkboxLabel: {
+    display: "flex",
+    alignItems: "center", // Align checkbox and label in the same row
+  },
+  checkbox: {
+    marginRight: "10px", // Space between checkbox and label
   },
 };
 
