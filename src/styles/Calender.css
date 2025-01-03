@@ -1,0 +1,54 @@
+/* Custom styles for React Big Calendar */
+.rbc-calendar {
+    font-family: Arial, sans-serif;
+  }
+  
+  .rbc-event-content {
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .rbc-event {
+    background-color: #4A5568; /* Default color for events */
+  }
+  
+  .rbc-event.upcoming {
+    background-color: #2B6CB0; /* Blue for upcoming events */
+  }
+  
+  .rbc-event.overdue {
+    background-color: #EF4444; /* Red for overdue events */
+  }
+  
+  .rbc-event.due-today {
+    background-color: #F59E0B; /* Yellow for events due today */
+  }
+  
+  .rbc-event.previous {
+    background-color: #000000; /* Black for previously communicated events */
+  }
+  
+  /* Customizing "show more" button */
+  .rbc-show-more {
+    background-color: #1976d2; /* Custom background color */
+    color: white; /* Custom text color */
+    padding: 5px 10px; /* Custom padding */
+    border-radius: 4px; /* Custom border radius */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Centered text */
+  }
+  
+  /* Customizing the popup overlay */
+  .rbc-overlay {
+    background-color: white; /* White background for the overlay */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 10px; /* Padding for content inside the overlay */
+  }
+  
+  .rbc-overlay .rbc-event {
+    margin-bottom: 5px; /* Space between events */
+  }
+  
