@@ -1,70 +1,163 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Communication Management App
 
-## Available Scripts
+This project is a **Communication Management System** designed for administrators and users to manage companies, communication methods, and communication scheduling. It provides a comprehensive interface for both admin users (for managing companies and communication methods) and end-users (for tracking communication tasks and scheduling). This app is built using React and provides a smooth and interactive UI for managing and performing tasks.
 
-In the project directory, you can run:
+## Deployed Version
 
-### `npm start`
+The app is deployed on Netlify. You can access the live version at: [Communication Management App](https://calender-application-new.netlify.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- **Node.js** and **npm** should be installed on your system. You can check if they are installed by running:
+  ```bash
+  node -v
+  npm -v
+  ```
+  If not, you can download and install them from [here](https://nodejs.org/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository-url.git
+   cd your-project-directory
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+### Available Scripts
+
+In the project directory, you can run the following commands:
+
+#### `npm start`
+
+Runs the app in the development mode.Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.You may also see any lint errors in the console.
+
+#### `npm test`
+
+Launches the test runner in the interactive watch mode.See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+#### `npm run build`
+
+Builds the app for production to the `build` folder.It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.Your app is ready to be deployed!
+
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+The app is organized into the following directories:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **/src**: Contains the main React app and its components.
+  - **/components**: Contains the UI components like login, dashboard, and others.
+  - **/Admin**: Admin-related modules like communication method management and company management.
+  - **/User**: User-related modules like dashboard, calendar view, and notifications.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Admin Module
 
-### Code Splitting
+The Admin module allows administrators to configure the application and manage its foundational data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Company Management
 
-### Analyzing the Bundle Size
+Admins can add, edit, and delete companies. Each company entry includes:
+- Name
+- Location
+- LinkedIn Profile
+- Emails
+- Phone Numbers
+- Comments
+- Communication Periodicity (default communication interval)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Communication Method Management
 
-### Making a Progressive Web App
+Admins define available communication methods in the system. Each method includes:
+- Name (e.g., "Visit" or "LinkedIn Post")
+- Description
+- Sequence (order of communication)
+- Mandatory Flag (whether the method is mandatory in the sequence)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### User Module
 
-### Advanced Configuration
+The User module is the primary interface for end-users, enabling them to view, manage, and perform communication tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Dashboard
 
-### Deployment
+The dashboard provides a grid view where each row represents a company, and the columns include:
+- Company Name
+- Last Five Communications
+- Next Scheduled Communication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Communication Action
 
-### `npm run build` fails to minify
+Users can log a new communication by selecting one or multiple companies. The modal allows them to:
+- Choose Communication Type (e.g., LinkedIn Post, Email)
+- Input Date of Communication
+- Add Notes about the communication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Upon submission, the highlights (Red or Yellow) are reset for the selected company/companies.
+
+#### Notifications
+
+A dedicated section that lists overdue and due communications:
+- Overdue Communications
+- Today's Communications
+
+#### Calendar View
+
+A calendar interface that allows users to:
+- View Past Communications
+- Manage Upcoming Communications
+
+---
+
+## Login Details
+
+- **Admin Login**: 
+  - Username: `admin`
+  - Password: `admin123`
+
+- **User Login**: 
+  - Username: `user@example.com`
+  - Password: `password123`
+
+---
+
+## Running the App Locally
+
+To run the app locally, follow these steps:
+
+1. Clone the repository and install dependencies.
+2. Run the app with `npm start`.
+3. Open [http://localhost:3000](http://localhost:3000) to access the app in your browser.
+
+---
+
+## Additional Information
+
+For any additional help or to learn more, check out the following resources:
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+  
+---
+
+**Note**: For deployment, follow the official documentation on [Netlify](https://www.netlify.com/docs/).
