@@ -7,6 +7,18 @@ This project is a **Communication Management System** designed for administrator
 
 The app is deployed on Netlify. You can access the live version at: [Communication Management App](https://calender-application-new.netlify.app)
 
+Admin Login - https://calender-application-new.netlify.app/admin-login
+
+## Login Details
+
+- **Admin Login**: 
+  - Username: `admin`
+  - Password: `admin123`
+
+- **User Login**: 
+  - Username: `user@example.com`
+  - Password: `password123`
+
 ---
 
 ## Getting Started
@@ -26,8 +38,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository-url.git
-   cd your-project-directory
+   git clone https://github.com/Tanzeera/calender-project.git
+   cd calender-project
    ```
 
 2. Install dependencies:
@@ -126,18 +138,6 @@ A dedicated section that lists overdue and due communications:
 A calendar interface that allows users to:
 - View Past Communications
 - Manage Upcoming Communications
-
----
-
-## Login Details
-
-- **Admin Login**: 
-  - Username: `admin`
-  - Password: `admin123`
-
-- **User Login**: 
-  - Username: `user@example.com`
-  - Password: `password123`
 
 ---
 
